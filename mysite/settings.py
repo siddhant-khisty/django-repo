@@ -83,9 +83,9 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.mysql' instead of the following.
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'polls',
-        'USER': 'root',
-        'PASSWORD': 'passcode',
-        'HOST': 'sql-ch-dev-mysql.dev',
+        'USER': 'demo-dB',
+        'PASSWORD': 'demo213',
+        'HOST': 'sql-db-mysql',
         'PORT': '3306',
     }
 }
