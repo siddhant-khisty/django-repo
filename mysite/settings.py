@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'django-app',
         'USER': 'sid',
         'PASSWORD': 'test',
-        'HOST': 'django-sql-chart-mysql',
+        'HOST': 'django-sql-mysql',
         'PORT': '3306',
     }
 }
