@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'django-app',
         'USER': 'sid',
         'PASSWORD': secret_client.get_secret("secret-name"),
-        'HOST': 'django-sql-mysql',
+        'HOST': 'sql-mysql',
         'PORT': '3306',
     }
 }
