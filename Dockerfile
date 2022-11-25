@@ -26,6 +26,7 @@ ENV PATH /env/bin:$PATH
 
 ADD requirements.txt /app/requirements.txt
 RUN /env/bin/pip install --upgrade pip && /env/bin/pip install -r /app/requirements.txt
+RUN /env/bin/pip install azure-keyvault-secrets azure-identity
 ADD . /app
 
 CMD gunicorn -b :$PORT mysite.wsgi
