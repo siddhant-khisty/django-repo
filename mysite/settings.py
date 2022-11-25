@@ -14,6 +14,12 @@
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+
+credential = DefaultAzureCredential()
+
+secret_client = SecretClient(vault_url="https://my-key-vault.vault.azure.net/", credential=credential)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -84,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django-app',
         'USER': 'sid',
-        'PASSWORD': 'test',
+        'PASSWORD': secret_client.get_secret("secret-name"),
         'HOST': 'django-sql-mysql',
         'PORT': '3306',
     }
