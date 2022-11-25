@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django-app',
         'USER': 'sid',
-        'PASSWORD': secret_client.get_secret("secret-name"),
+        'PASSWORD': 'test',
         'HOST': 'sql-mysql',
         'PORT': '3306',
     }
